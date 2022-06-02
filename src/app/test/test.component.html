@@ -1,0 +1,22 @@
+<h1>Pipes</h1>
+<ul>
+    <li>{{name | uppercase}}</li>
+    <li>{{name | lowercase}}</li>
+    <li>{{message | titlecase}}</li>
+    <li>{{name | slice:1:3}}</li>
+    <li>{{person | json }}</li>
+
+    <li>{{2.345 | number:'1.1-2'}}</li>
+    <li>{{2.345 | number:'3.4-5'}}</li>
+
+    <li>{{.43 | percent}}</li>
+
+    <li>{{200 | currency}}</li>
+    <li>{{200 | currency: 'GBP'}}</li>
+    <li>{{200 | currency: 'EUR'}}</li>
+
+    <li>{{date}}</li>
+    <li>{{date | date:'short'}}</li>
+    <li>{{date | date:'shortDate'}}</li>
+    <li>{{date | date:'shortTime'}}</li>
+</ul>
