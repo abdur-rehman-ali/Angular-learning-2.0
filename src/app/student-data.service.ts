@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Istudent } from './student';
 
 @Injectable({
   providedIn: 'root'
@@ -32,9 +35,14 @@ export class StudentDataService {
     },
   ]
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getData(){
-    return this.data;
+  // getData(){
+  //   return this.data;
+  // }
+
+  private url = 'https://jsonplaceholder.typicode.com/posts';
+  getData(): Observable<Istudent[]>{
+    return this.http.get<Istudent[]>(this.url);
   }
 }

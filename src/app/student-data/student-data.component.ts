@@ -11,7 +11,8 @@ export class StudentDataComponent implements OnInit {
   constructor(private _student_data_service:StudentDataService) { }
 
   ngOnInit(): void {
-    this.data = this._student_data_service.getData();
+    this._student_data_service.getData()
+        .subscribe(dt => this.data = dt)
   }
 
 }
